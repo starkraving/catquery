@@ -1,0 +1,30 @@
+{
+  "name": "catquery",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp Image Search Abstraction Layer",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "mongod": "^1.3.0",
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.19"
+  },
+  "engines":{
+    "node": "4.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm app.js production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starkraving/catquery.git"
+  },
+  "author": "Mike Ritchie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starkraving/catquery/issues"
+  },
+  "homepage": "https://github.com/starkraving/catquery#readme"
+}
