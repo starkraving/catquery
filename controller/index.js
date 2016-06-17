@@ -8,7 +8,7 @@ var Query = require('../model/query');
 
 router.get('/', function(req, resp){
 	resp.contentType('text/html');
-	resp.sendFile(__dirname+'/view/home.html');
+	resp.sendFile(__dirname+'/../view/home.html');
 });
 
 router.get('/search', function(req, resp){
