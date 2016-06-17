@@ -2,13 +2,14 @@ var express = require('express');
 var router = express.Router();
 var https = require('https');
 var mongoose = require('mongoose');
+var path = require('path');
 mongoose.connect(process.env.MONGODB_URI);
 console.log('connected to MongoDB');
 var Query = require('../model/query');
 
 router.get('/', function(req, resp){
 	resp.contentType('text/html');
-	resp.sendFile(__dirname+'/../view/home.html');
+	resp.sendFile(path.resolve(__dirname+'/../view/home.html'));
 });
 
 router.get('/search', function(req, resp){
