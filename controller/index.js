@@ -65,7 +65,18 @@ router.get('/search/:terms/:offset?', function(req, resp){
 });
 
 router.get('/top5', function(req, resp){
-	
+	resp.contentType('text/JSON');
+	Query.find().sort('-timestamp').limit(5).exec(function(err, data){
+		var result = [];
+		for ( var i in data ) {
+			var row = data[i];
+			result.push({
+				terms: row.terms,
+				dateTime: new Date(row.timestamp).toString()
+			});
+		}
+		resp.end(JSON.stringify(result));
+	});
 })
 
 module.exports = router;
